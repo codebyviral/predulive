@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Dancing+Script&family=DynaPuff&family=Fjalla+One&family=Lilita+One&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Dancing+Script&family=DynaPuff&family=Fjalla+One&family=Great+Vibes&family=Kaushan+Script&family=Lilita+One&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Bruno+Ace+SC&family=Dancing+Script&family=DynaPuff&family=Fjalla+One&family=Great+Vibes&family=Kaushan+Script&family=Lilita+One&family=Pacifico&display=swap");
+
+p{
+  padding: 40px;
+}
+.font-bruno{
+  font-family: Bruno Ace SC;
+}
+
+#mainImg{
+  height: 60vh;
+  width: 100vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body{
+    overflow-x: hidden;
+  }
+  .navbar{
+    width: 100vw;
+  }
+  header{
+    width: 100vw;
+  }
+  
+  .carousel{
+    display: inline-block;
+    height: 40vh;
+  }
+  .carousel-inner{
+    display: inline-block;
+    height: 40vh !important;
+  }
+  #changeCarausal{
+    display: inline-block;
+    height: 20vh;
+  }
+
+}

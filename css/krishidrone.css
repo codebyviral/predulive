@@ -1,0 +1,81 @@
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: 120px;
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .custom-css-container {
+        width: calc(100%/2);
+        height: calc(100%/2);
+    }
+
+    .img-drone {
+        width: 700px;
+        height: 400px;
+        min-width: 700px;
+        min-height: 400px;
+        border: solid 4px transparent !important;
+        border-radius: 22px !important;
+    }
+    .krishi-heading{
+        font-size:30px;
+    }
+    .krishi-head{
+        position: relative;
+        left: 300px;
+        width: 100% !important;
+        white-space: nowrap;
+    }
+    .para-1{
+        white-space: nowrap;
+        margin-left: 60px;
+        font-size: 17px;
+    }
+    .para-2{
+        width: 601px;
+        min-width: 600px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .img-drone {
+        max-width: 500px;
+        max-height: 285px;
+    }
+    .carousel-btn{
+        margin-bottom: 220px;
+    }
+}
+.krishi-heading{
+    animation-name:italicunderline;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+}
+@keyframes italicunderline {
+    from{
+        font-style: italic;
+        text-decoration: underline;
+    }
+    to{
+        font-style: normal;
+    }
+}   
+@media only screen and (max-width:800px){
+    .img-drone{
+        margin-top:40px;
+        border-radius:22px;
+        min-height:218px;
+        height: 218px !important;
+    }
+    .carousel-btn{
+        margin-top: calc(100%/2.2);
+    }
+    div.carousel-inner{
+        height: auto;
+    }
+    .krishi-para{
+        margin-top: 20px !important;
+    }
+}

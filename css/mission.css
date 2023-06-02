@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Bruno+Ace+SC&family=Dancing+Script&family=DynaPuff&family=Fjalla+One&family=Great+Vibes&family=Kaushan+Script&family=Lilita+One&family=Pacifico&display=swap");
+/* @import url(./style.css); */
+
+#c1,#c2 {
+  background-image: url("../img/pexels-jeshootscom-442589.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  padding-top: 2vh;
+}
+
+.mission {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Bruno Ace SC", cursive;
+}
+
+#c1,
+#c2 {
+  width: 100rem;
+}
+
+@media screen and (max-width: 920px) and (min-width: 550px) {
+  #c1,
+  #c2 {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 550px) and (min-width: 400px) {
+  #c1,
+  #c2 {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  #c1,
+  #c2 {
+    width: 15rem;
+    left: 1rem;
+  }
+  .card-body h5 {
+    font-size: 1rem;
+  }
+}
