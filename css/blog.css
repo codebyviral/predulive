@@ -12,7 +12,6 @@ footer {
 #hbl {
     margin-top: 10px;
 }
-
 body {
     margin: 0;
     min-height: 100vh;
@@ -97,6 +96,9 @@ body {
     border-radius: inherit;
 }
 @media only screen and (max-width:768px) {
+    .pwd{
+        display: none !important;
+    }
     .cd-asset{
         margin: 70px 70px;
         height: 500px !important;

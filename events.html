@@ -11,17 +11,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script>
-      window.chatbaseConfig = {
-        chatbotId: "1_YC8TzLfeegur_leA7D7",
-      }
-    </script>
-    <script
-      src="https://www.chatbase.co/embed.min.js"
-      id="1_YC8TzLfeegur_leA7D7"
-      defer>
-    </script>
-
+    <link rel="shortcut icon" href="./img/logo3.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
     </style>
@@ -37,7 +27,36 @@
   <div id="navbar">
     <!-- returns navbar from app.js don't remove -->
   </div>
-
+   <!-- chatbot  -->
+   <div  id="chatbot">
+    <img onclick="chat()" id="chatbot-ico" width="45px" src="./assets/chat/msg.png" alt="">
+</div>
+<div hidden  id="chat-screen">
+    <div class="chat-container">
+    <img height="40px" width="40px" src="./img/logo3.png" alt="">
+    <p class="chat-head">Predulive Labs</p>
+    <img id="clear" onclick="clearChat()" width="15px" height="15px" src="https://img.icons8.com/?size=512&id=59872&format=png" alt="">
+    <img id="cross" onclick="closeChat()" width="15px" height="15px" src="./assets/chat/cross.png" alt="">
+</div>
+<div id="chat-display">
+        <h6 class="fade-right" id="welcome-msg">Welcome to Predulive Labs</h6>
+        <div id="input-msg">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Ask</span>
+                <input id="user-msg" type="text" class=" msg form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <img onclick="send()" id="send-img" width="40px" height="30px" src="https://img.icons8.com/?size=512&id=85891&format=png" alt="">
+        </div>
+        <div class="messages">
+            <p id="msg-screen"></p><br>
+            <p id="msg-screen-1"></p>
+            <p hidden id="reply-screen"></p>
+        </div>
+</div>
+    <!-- chat screen -->
+    <p class="text-center" style="font-size: 12px;"> Powered By Predulive Labs Web Team 🚀</p>
+</div>
+<!--chatbot -->
     <main>
         <br /> <br /> <br /> <br />
         <div id="droneImgGif">
@@ -77,7 +96,37 @@
                 <h6 class="text-center"> We hope you will join us for our summer drone workshop training and discover
                     the exciting world of drones!</h6>
             </div> -->
-            <div class="register mt-7">
+             <div id="venue-card" class="card text-center mx-auto mt-5">
+            <div class="header">
+                                    <span class="title">The Drone</span>
+                                    <span class="price">ERA</span> <br>
+                                    Venue:
+                                </div>
+                                <p class="desc">Goel Institue of Technology, and management,Lucknow U.P <br>
+                                Date: <span> July 3 - July 8 ,2023</span></p>
+                                <ul class="lists">
+                                    <li class="list">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Build and Design your UAV</span>
+                                    </li>
+                                    <li class="list">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Win Exciting Rewards</span>
+                                    </li>
+                                    <li class="list">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Racing Competition</span>
+                                    </li>
+                                </ul>
+                                <button id="era-join" onclick="window.location.href=`https://forms.gle/9wqA92ASBVu2pEqw5`;" type="button" class="action">Join Now</button>
+                            </div>
+            <div hidden class="register mt-7">
               <h2 class="join-h2">TO REGISTER FOR <strong>The Drone ERA</strong> <a href="https://forms.gle/H1fFfBrBStdNZmNK6"
                       class="join-a">Click Here</a></h2>
           </div>
@@ -126,7 +175,7 @@
         <div class="tiles">
             <div class="droneRacing">
                 <div class="cards">
-                    <img src="./img/race.jpg" alt="" class="img">
+                    <img id="race-img" src="./img/race.jpg" alt="" class="img">
                     <h5 class="card-title">Drone Racing Competition</h5>
                     <br>
                     <p class="card-text">Who will be the fastest and the smartest in this aerial challenge? 🏆</p>
@@ -145,43 +194,6 @@
                 </div>
             </div><br><br><br>
         </div>
-
-        <div class="venue3">
-
-            <div class="card mt-5 venue1 venue311" data-aos="flip-up" data-aos-duration="3000">
-                <div class="card-body">
-                    <h5 class="card-title venue789" style="text-align: center; color: white;">
-                        Venue
-                    </h5>
-                </div>
-
-                <div class="card-body venue">
-                    <div id="col-1">
-                        <p><strong>Date:</strong></p>
-                        <br><br>
-                        <p><strong>Time:</strong></p>
-                        <p><strong>Location:</strong></p>
-                    </div>
-                    <div id="col-2">
-                        <p>June 26-JULY 8,2023</p>
-                        <br>
-                        <p>9:00 AM - 4:00 PM</p>
-                        <p>BBD Campus, Lucknow,UP,India</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="join1 mt-5">
-            <h2 class="join-h2">To Join <strong>The Drone ERA</strong> <a href="https://forms.gle/H1fFfBrBStdNZmNK6"
-                    class="join-a">Click Here</a></h2>
-        </div>
-        <button onclick="window.location.href='./contact.html'" class="git-bottom btn btn-warning bottom-btn-touch" id="getintouch" style="margin-left: 47vw;margin-top: 2vh;margin-bottom: 2vh;">
-          <h6 style="font-size: large;;">
-              Get in Touch
-          </h6>
-      </button>
     <div id="footer">
       <!-- returns footer from app.js don't remove -->
     </div>

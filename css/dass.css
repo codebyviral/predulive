@@ -2,7 +2,9 @@ main{
     position: relative;
     top: 10vh;
 } 
-
+#msg-screen{
+    color: black !important;
+}
 .accordion_obj{
     position: relative;
     width: 80vw;
@@ -107,11 +109,13 @@ footer{
 }
 
 
+
 @media only screen and (max-width:768px){
+    *{
+        overflow-x: hidden !important;
+    }
     .img-drone{
         border:2px white;
         border-radius:22px;
     } 
-
-
 }

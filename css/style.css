@@ -474,7 +474,7 @@ a {
     text-decoration: none !important;
 }
 
-# @keyframes YOInit {
+@keyframes YOInit {
     from {
         text-align: center;
     }
@@ -1128,7 +1128,7 @@ button.git-bottom {
     @keyframes fade-right {
         from {
             opacity: 0;
-            transform: translateX(-10px);
+            transform: translateX(-60px);
             z-index: 1000;
         }
 
@@ -1136,5 +1136,8 @@ button.git-bottom {
             opacity: 1;
             z-index: 1000;
         }
+    }
+    #chatbot-ico{
+        margin-top: 110px;
     }
 }

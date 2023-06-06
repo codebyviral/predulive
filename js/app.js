@@ -248,10 +248,30 @@ function returnFooter() {
 returnNav();
 returnFooter();
 
-function redirectContact() {
+const redirectContact=()=>{
     window.location.href = `../contact.html`;
 }
 // CHAT APP //
+const Replies={
+    contact:` Predulive Innovations Pvt. Ltd.
+    PLOT NO. 3B, KAPEESH VIHAR COLONY UATTARDHONA, LUCKNOW, UTTAR PRADESH,INDIA, 226028 <br>
+    +91 9918443373 <br>
+    +91 6306104928 <br/>
+    However you can get in touch with us on our contact page <br>
+    <a class='mt-2' href="https://www.predulivelabs.in/contact.html">Get in Touch</a>`,
+    hello:`Hello, how may I help you?`,
+    event:`Drone <b>Era</b> is Asia's biggest drone event by Predulive Labs. <br>
+    The event will be held from July 3 - July 8, 2023 <br/>
+    <a href='https://www.predulivelabs.in/events.html'>click to know more</a> <br/>
+    Location: Goel Institue of Technology, and management,Lucknow U.P<br>
+    <a class='mt-1' href="https://docs.google.com/forms/d/e/1FAIpQLSdTragUnJY-FclnKomFAbfsXH9-iI6IWjYEwDHklnoVdWY8RQ/viewform">Click To Join Event</a>`,
+    about:` <p>Our vision at Predulive Labs is to revolutionize the world of drone technology and transform the way people interact with the environment around them.</p>
+    <br>
+    <a href='../about.html'>Click Here To know About Us</a>`,
+    out:`Chatbot is under development.
+    Please message something short and relative.
+    ref: phone,drone era,etc.`
+}
 function chat() {
     document.getElementById('chat-screen').hidden = false;
 }
@@ -265,53 +285,32 @@ function send() {
     const processMessage=userMessage.toLowerCase();
     document.getElementById('msg-screen').innerText = userMessage;
     if (processMessage == 'hi' || processMessage=='hello') {
-        const hello = 'Hello, how may I help you?'
         document.getElementById('reply-screen').hidden = false
-        document.getElementById('reply-screen').innerText = hello
+        document.getElementById('reply-screen').innerText = Replies.hello
     } else if (processMessage == 'contact' || processMessage == 'phone'|| processMessage == 'call') {
         function contactReply() {
-            var conReply = `
-        Predulive Innovations Pvt. Ltd.
-    PLOT NO. 3B, KAPEESH VIHAR COLONY UATTARDHONA, LUCKNOW, UTTAR PRADESH,INDIA, 226028 <br>
-    +91 9918443373 <br>
-    +91 6306104928 <br/>
-    However you can get in touch with us on our contact page <br>
-    <a class='mt-2' href="https://www.predulivelabs.in/contact.html">Get in Touch</a>
-        `;
             document.getElementById('reply-screen').hidden = false;
-            document.getElementById('reply-screen').innerHTML = conReply;
+            document.getElementById('reply-screen').innerHTML = Replies.contact;
      }
         contactReply();
     } 
     
     else if (processMessage=='drone era' || processMessage=='era' || processMessage=='event'){
-        let eventReply=`
-        Drone <b>Era</b> is Asia's biggest drone event by Predulive Labs. <br>
-        The event will be held on June 26 <br/>
-        <a href='https://www.predulivelabs.in/events.html'>click to know more</a> <br/>
-        Timings: 9:00 AM to 4:00 PM <br> <br/>
-        Location: BBD Campus, Lucknow,UP,India <br>
-        <a class='mt-1' href="https://docs.google.com/forms/d/e/1FAIpQLSdTragUnJY-FclnKomFAbfsXH9-iI6IWjYEwDHklnoVdWY8RQ/viewform">Click To Join Event</a>
-        `;
         document.getElementById('reply-screen').hidden = false;
-            document.getElementById('reply-screen').innerHTML = eventReply;
+            document.getElementById('reply-screen').innerHTML = Replies.event;
     } else if(processMessage=='about us'||processMessage=='about'||processMessage=='us'){
         const aboutReply=`
-        <p>Our vision at Predulive Labs is to revolutionize the world of drone technology and transform the way people interact with the environment around them.</p>
-        <br>
-        <a href='../about.html'>Click Here To know About Us</a>
+       
         `;
         document.getElementById('reply-screen').hidden = false;
-            document.getElementById('reply-screen').innerHTML = aboutReply;
+            document.getElementById('reply-screen').innerHTML = Replies.about;
     }
      else{
         let outerReply=`
-        Chatbot is under development.
-        Please message something short and relative.
-        ref: phone,drone era,etc.
+        
         `;
         document.getElementById('reply-screen').hidden = false;
-            document.getElementById('reply-screen').innerHTML = outerReply;
+            document.getElementById('reply-screen').innerHTML = Replies.out;
     }
     document.getElementById('user-msg').value = null;
 }
